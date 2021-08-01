@@ -7,6 +7,7 @@
 
 body {
   color: white;
+  background: rgb(246, 246, 246);
 }
 
 h1{
@@ -31,11 +32,9 @@ h5{
 .cardsContainer{
   width: 945px;
   height: 500px;
-  background: green;
   display: flex;
   align-items: center;
   margin: 200px auto;
-  border-radius: 8px;
   justify-content: space-between;
 }
 
@@ -71,6 +70,12 @@ h5{
   border-radius: 25px;
 }
 
+.btn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
 .btn h5{
   padding-top: 15px;
 }
@@ -95,4 +100,29 @@ h5{
 .attribution p{
   font-size: 12px;
   color: grey;
+}
+
+@media (max-width: 600px){
+  .cardsContainer{
+    flex-direction: column;
+    display: inline-block;
+    margin: 70px 25px;
+    padding: 0 30px;
+  }
+
+  .card{
+    height: 420px;
+  }
+
+  .card.sedans{
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card.luxury{
+    border-radius: 0px 0px 8px 8px;
+  }
+
+  .btn{
+    margin: 30px auto 10px 50px;
+  }
 }
